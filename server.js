@@ -8,9 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 // Import and register routes
-const setupUnreadCountsRoutes = require('./routes/unreadCounts');
-const teamDetailsRoutes = require('./routes/teamDetails');
-const latestPostsRoutes = require('./routes/latestPosts');
+const setupUnreadCountsRoutes = require('./api/unreadCounts');
+const teamDetailsRoutes = require('./api/teamDetails');
+const latestPostsRoutes = require('./api/latestPosts');
 
 // Ensure distinct base paths for each route
 app.use('/api/unread-counts', setupUnreadCountsRoutes(db)); // Route for unread counts
